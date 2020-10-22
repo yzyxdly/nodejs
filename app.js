@@ -11,6 +11,7 @@ var orp = require('./routes/orp');
 var eden = require('./routes/eden');
 var release = require('./routes/release');
 var spm = require('./routes/spm');
+var codes = require('./routes/codes');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/orp', orp);
 app.use('/eden', eden);
 app.use('/release', release);
 app.use('/spm', spm);
+app.use('/codes', codes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -64,5 +66,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-
+app.listen(3000)
 module.exports = app;
